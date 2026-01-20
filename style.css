@@ -1,0 +1,142 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background animation */
+body {
+    min-height: 100vh;
+    background: linear-gradient(270deg, #43cea2, #185a9d, #43cea2);
+    background-size: 600% 600%;
+    animation: bgMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background keyframes */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Form card */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 35px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: slideUp 1s ease forwards;
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+/* Form entrance */
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Field container */
+form > div {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    transition: color 0.3s;
+}
+
+/* Inputs */
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Textarea */
+textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+/* Focus glow */
+input:focus,
+textarea:focus {
+    border-color: #43cea2;
+    box-shadow: 0 0 10px rgba(67, 206, 162, 0.4);
+}
+
+/* Label color change on focus */
+input:focus + label,
+textarea:focus + label {
+    color: #43cea2;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+/* Button hover */
+button:hover {
+    background-position: right center;
+    box-shadow: 0 12px 25px rgba(24, 90, 157, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Button click */
+button:active {
+    transform: scale(0.96);
+}
+
+/* Input hover effect */
+input:hover,
+textarea:hover {
+    border-color: #185a9d;
+}
+
+/* Smooth placeholder fade */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    transition: opacity 0.3s;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0.4;
+}
